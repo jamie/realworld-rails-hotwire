@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-block">
+    <p class="card-text"><%= comment.content %></p>
+  </div>
+  <div class="card-footer">
+    <a href="" class="comment-author">
+      <img src="http://i.imgur.com/Qr71crq.jpg" class="comment-author-img" />
+    </a>
+    &nbsp;
+    <a href="" class="comment-author">Jacob Schmidt</a>
+    <span class="date-posted"><%= comment.created_at.to_s(:short_ordinal) %></span>
+  </div>
+</div>
