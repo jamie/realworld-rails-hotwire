@@ -4,6 +4,7 @@ inherit_gem:
 AllCops:
   NewCops: enable
   Exclude:
+    - 'config/initializers/00_devise.rb'
     - 'db/schema.rb'
 Style/ClassAndModuleChildren:
   Enabled: false
