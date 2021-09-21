@@ -48,8 +48,8 @@
           <p>Popular Tags</p>
 
           <div class="tag-list">
-            <% Gutentag::Tag.order("taggings_count desc, name asc").limit(10).each do |tag| %>
-              <a href="" class="tag-pill tag-default"><%= tag.name %></a>
+            <% @top_tags.each do |tag| %>
+              <a href="/?tag=<%= tag.name %>" class="tag-pill tag-default"><%= tag.name %></a>
             <% end %>
           </div>
         </div>

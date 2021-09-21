@@ -1,7 +1,12 @@
 # frozen_string_literal: true
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.all
+    @articles = if params[:tag]
+      Article.tagged_with(names: params[:tag])
+    else
+      Article.all
+    end
+    @top_tags = Gutentag::Tag.order("taggings_count desc, name asc").limit(10)
   end
 
   def show
