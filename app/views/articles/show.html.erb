@@ -71,7 +71,7 @@
           </div>
         <% end %>
 
-        <%= render partial: "comment", collection: @article.comments %>
+        <%= render partial: "comment", collection: @article.comments.with_rich_text_content %>
       </div>
     </div>
   </div>
