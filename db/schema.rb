@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2021_09_21_180735) do
     t.integer "favorites_count"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["slug"], name: "index_articles_on_slug"
+    t.index ["slug"], name: "index_articles_on_slug", unique: true
   end
 
 end

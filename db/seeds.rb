@@ -9,14 +9,12 @@
 
 Article.create(
   title: "How to build webapps that scale",
-  slug: "how-to-build-webapps-that-scale",
   description: "This is the description for the post.",
   favorites_count: 29,
   body: "",
 )
 Article.create(
   title: "The song you won't ever stop singing. No matter how hard you try.",
-  slug: "the-song",
   description: "This is the description for the post.",
   favorites_count: 32,
   body: "",
