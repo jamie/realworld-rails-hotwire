@@ -53,7 +53,6 @@ ActiveRecord::Schema.define(version: 2021_09_21_205812) do
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.string "slug"
-    t.text "body"
     t.string "description"
     t.integer "favorites_count"
     t.datetime "created_at", precision: 6, null: false

@@ -4,7 +4,6 @@ class CreateArticles < ActiveRecord::Migration[7.0]
     create_table(:articles) do |t|
       t.string(:title)
       t.string(:slug, index: { unique: true })
-      t.text(:body)
       t.string(:description)
       t.integer(:favorites_count)
 

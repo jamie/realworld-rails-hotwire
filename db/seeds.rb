@@ -11,7 +11,7 @@ Article.create(
   title: "How to build webapps that scale",
   description: "This is the description for the post.",
   favorites_count: 29,
-  body: <<~HTML,
+  content: <<~HTML,
     <p>
     Web development technologies have evolved at an incredible clip over the past few years.
     </p>
@@ -23,7 +23,7 @@ Article.create(
   title: "The song you won't ever stop singing. No matter how hard you try.",
   description: "This is the description for the post.",
   favorites_count: 32,
-  body: <<~HTML,
+  content: <<~HTML,
     <p>This is the song that never ends... Yes it goes on and on my friends...</p>
   HTML
 )

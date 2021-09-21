@@ -1,0 +1,27 @@
+<div class="editor-page">
+  <div class="container page">
+    <div class="row">
+
+      <div class="col-md-10 offset-md-1 col-xs-12">
+        <%= form_with model: @article do |form| %>
+          <fieldset>
+            <fieldset class="form-group">
+              <%= form.text_field :title, class: "form-control form-control-lg", placeholder: "Article Title" %>
+            </fieldset>
+            <fieldset class="form-group">
+              <%= form.text_field :description, class: "form-control", placeholder: "What's this article about?" %>
+            </fieldset>
+            <fieldset class="form-group">
+              <%= form.rich_text_area :content, class: "form-control", placeholder: "Write a comment..." %>
+            </fieldset>
+            <fieldset class="form-group">
+              <input type="text" class="form-control" placeholder="Enter tags"><div class="tag-list"></div>
+            </fieldset>
+            <%= form.submit "Publish Article", class: "btn btn-lg pull-xs-right btn-primary" %>
+          </fieldset>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>
