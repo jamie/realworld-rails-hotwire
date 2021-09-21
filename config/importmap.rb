@@ -6,3 +6,5 @@
 
 pin "application"
 pin "@hotwired/turbo-rails", to: "turbo.js"
+pin "trix"
+pin "@rails/actiontext", to: "actiontext.js"
