@@ -15,6 +15,7 @@
               <%= form.rich_text_area :content, class: "form-control", placeholder: "Write a comment..." %>
             </fieldset>
             <fieldset class="form-group">
+              <%= form.text_field :tag_list, class: "form-control", placeholder: "Enter tags" %>
               <input type="text" class="form-control" placeholder="Enter tags"><div class="tag-list"></div>
             </fieldset>
             <%= form.submit "Publish Article", class: "btn btn-lg pull-xs-right btn-primary" %>

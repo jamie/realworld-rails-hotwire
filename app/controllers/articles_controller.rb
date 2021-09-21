@@ -18,6 +18,7 @@ class ArticlesController < ApplicationController
         :title,
         :description,
         :content,
+        :tag_list,
       )
     )
     redirect_to(article)
