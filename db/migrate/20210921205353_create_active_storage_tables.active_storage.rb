@@ -34,12 +34,11 @@ class CreateActiveStorageTables < ActiveRecord::Migration[5.2]
         t.datetime(:created_at, null: false)
       end
 
-      t.index([:record_type, :record_id, :name, :blob_id], name: "index_active_storage_attachments_uniqueness",
-unique: true)
+      t.index([:record_type, :record_id, :name, :blob_id], name: "index_active_storage_attachments_uniqueness", unique: true)
       t.foreign_key(:active_storage_blobs, column: :blob_id)
     end
 
-    create_table(:active_storage_variant_records, id: primary_key_type) do |t|
+    create_table(:active_storage_variant_records, id: primary_key_type) do |t| # rubocop:disable Rails/CreateTableWithTimestamps
       t.belongs_to(:blob, null: false, index: false, type: foreign_key_type)
       t.string(:variation_digest, null: false)
 

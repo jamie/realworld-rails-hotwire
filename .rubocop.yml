@@ -1,10 +1,15 @@
 inherit_gem:
   rubocop-shopify: rubocop.yml
 
+require: rubocop-rails
+
 AllCops:
   NewCops: enable
   Exclude:
     - 'config/initializers/00_devise.rb'
     - 'db/schema.rb'
+Layout/LineLength:
+  Exclude:
+    - 'db/migrate/*'
 Style/ClassAndModuleChildren:
   Enabled: false
