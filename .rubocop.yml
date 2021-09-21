@@ -3,3 +3,7 @@ inherit_gem:
 
 AllCops:
   NewCops: enable
+  Exclude:
+    - 'db/schema.rb'
+Style/ClassAndModuleChildren:
+  Enabled: false
