@@ -206,7 +206,7 @@ GEM
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
-    solargraph (0.43.1)
+    solargraph (0.43.2)
       backport (~> 1.2)
       benchmark
       bundler (>= 1.17.2)
@@ -233,7 +233,7 @@ GEM
       rails (>= 6.0.0)
     thor (1.1.0)
     tilt (2.0.10)
-    turbo-rails (0.7.14)
+    turbo-rails (0.7.15)
       rails (>= 6.0.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
@@ -255,7 +255,7 @@ GEM
     xpath (3.2.0)
       nokogiri (~> 1.8)
     yard (0.9.26)
-    zeitwerk (2.5.0.beta3)
+    zeitwerk (2.5.0.beta4)
 
 PLATFORMS
   x86_64-darwin-19
