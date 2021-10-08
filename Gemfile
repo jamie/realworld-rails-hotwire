@@ -43,9 +43,10 @@ gem "bootsnap", ">= 1.4.4", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem "image_processing", "~> 1.2"
 
-gem "gutentag"
 gem "devise", require: false
 gem "friendly_id"
+gem "gutentag"
+gem "scout_apm"
 
 group :development, :test do
   # Start debugger with binding.b [https://github.com/ruby/debug]
