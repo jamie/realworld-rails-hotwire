@@ -27,6 +27,7 @@ production:
 development:
   <<: *defaults
   monitor: false
+  name: Conduit (development)
 
 test:
   <<: *defaults
