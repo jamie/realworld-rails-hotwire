@@ -8,7 +8,7 @@ ruby "3.0.2"
 gem "rails", "~> 7.0.0.alpha2"
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
+gem "pg"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -51,6 +51,7 @@ gem "scout_apm"
 group :development, :test do
   # Start debugger with binding.b [https://github.com/ruby/debug]
   gem "debug", ">= 1.0.0", platforms: [:mri, :mingw, :x64_mingw]
+  gem "sqlite3", "~> 1.4"
 end
 
 group :development do
