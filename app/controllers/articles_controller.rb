@@ -11,6 +11,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @article.oops / 0
     @comments = @article.comments.with_rich_text_content
   end
 
