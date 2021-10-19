@@ -2,3 +2,29 @@
 #   record: name_of_fixture (ClassOfFixture)
 #   name: content
 #   body: <p>In a <i>million</i> stars!</p>
+
+article_one:
+  record: one (Article)
+  name: content
+  body:
+    <p>
+    Web development technologies have evolved at an incredible clip over the past few years.
+    </p>
+    <h2 id="introducing-ionic">Introducing RealWorld.</h2>
+    <p>It's a great solution for learning how other frameworks work.</p>
+
+article_two:
+  record: two (Article)
+  name: content
+  body:
+    <p>This is the song that never ends... Yes it goes on and on my friends...</p>
+
+comment_one:
+  record: one (Comment)
+  name: content
+  body: <p>Hello, <i>world</i>.</p>
+
+comment_two:
+  record: two (Comment)
+  name: content
+  body: <p>Hello, to you too!</p>
