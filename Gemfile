@@ -22,7 +22,6 @@ gem "turbo-rails", ">= 0.7.11" # Hotwire's SPA-like page accelerator [https://tu
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # 3rd party gems
-gem "devise", require: false
 gem "friendly_id"
 gem "gutentag"
 gem "scout_apm"
