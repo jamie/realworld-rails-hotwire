@@ -6,10 +6,10 @@ require: rubocop-rails
 AllCops:
   NewCops: enable
   Exclude:
-    - 'config/initializers/00_devise.rb'
     - 'db/schema.rb'
+    - 'db/migrate/*'
 Layout/LineLength:
   Exclude:
-    - 'db/migrate/*'
+    - 'Gemfile'
 Style/ClassAndModuleChildren:
   Enabled: false
