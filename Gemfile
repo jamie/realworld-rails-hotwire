@@ -8,7 +8,7 @@ ruby "3.0.2"
 gem "rails", "~> 7.0.0.alpha2"
 
 ## Rails default gems
-# gem "bcrypt", "~> 3.1.7" # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
+gem "bcrypt", "~> 3.1.7" # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 gem "bootsnap", ">= 1.4.4", require: false
 gem "image_processing", "~> 1.2" # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem "importmap-rails", ">= 0.3.4" # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
