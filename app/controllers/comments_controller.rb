@@ -7,4 +7,9 @@ class CommentsController < ApplicationController
     )
     redirect_to(comment.article)
   end
+
+  def new
+    # Forced failure, used for testing error handlers
+    foo.oops
+  end
 end
