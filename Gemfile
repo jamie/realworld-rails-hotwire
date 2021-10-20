@@ -25,6 +25,7 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # 3rd party gems
 gem "friendly_id"
 gem "gutentag"
+gem "honeybadger", "~> 4.9"
 gem "scout_apm"
 
 group :development, :test do
@@ -55,5 +56,3 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-
-gem "honeybadger", "~> 4.9"
