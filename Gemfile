@@ -55,3 +55,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "honeybadger", "~> 4.9"

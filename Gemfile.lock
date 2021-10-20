@@ -93,6 +93,7 @@ GEM
       activesupport (>= 5.0)
     gutentag (2.6.1)
       activerecord (>= 3.2.0)
+    honeybadger (4.9.0)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.1)
@@ -263,6 +264,7 @@ DEPENDENCIES
   debug (>= 1.0.0)
   friendly_id
   gutentag
+  honeybadger (~> 4.9)
   image_processing (~> 1.2)
   importmap-rails (>= 0.3.4)
   jbuilder (~> 2.7)
