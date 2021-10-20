@@ -5,7 +5,7 @@ agent:
     type: e1-standard-2
     os_image: ubuntu2004
 blocks:
-  - name: Test
+  - name: Lint
     task:
       env_vars:
         - name: DATABASE_URL
@@ -13,21 +13,26 @@ blocks:
         - name: RAILS_ENV
           value: test
       jobs:
-        - name: Test
+        - name: rubocop
+          commands:
+            - checkout
+            - sem-version ruby 3.0.2
+            - cache restore
+            - bundle config set --local path 'vendor/bundle'
+            - bundle install
+            - cache store
+            - bundle exec rubocop
+  - name: Tests
+    task:
+      jobs:
+        - name: rails test
           commands:
             - checkout
             - sem-service start postgres 11
-            - sem-version ruby 2.6.5
+            - sem-version ruby 3.0.2
             - cache restore
-            - bundle install --path vendor/bundle
+            - bundle config set --local path 'vendor/bundle'
+            - bundle install
             - cache store
             - 'bundle exec rake db:setup'
             - bundle exec rake test
-        - name: Rubocop
-          commands:
-            - checkout
-            - sem-version ruby 2.6.5
-            - cache restore
-            - bundle install --path vendor/bundle
-            - cache store
-            - bundle exec rubocop
