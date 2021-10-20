@@ -21,6 +21,18 @@ For more information on how to this works with other frontends/backends, head ov
 * Rails 7.0
 * Sqlite
 
+# Third Party Services
+
+- https://github.com/ - code hosting
+- https://heroku.com/ - app hosting
+- https://scoutapm.com/ - Performance monitoring, manually apply for open source account
+- https://www.honeybadger.io/ - Error monitoring
+- TBD: https://sentry.io/ - Error monitoring
+- https://semaphoreci.com/ - Automated test runner (CI/CD)
+- TBD: https://buildkite.com/ - CI/CD
+
+TODO: See `.envrc.example` for relevant configuration values.
+
 # Getting started
 
 > npm install, npm start, etc.
