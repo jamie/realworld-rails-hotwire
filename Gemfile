@@ -27,6 +27,8 @@ gem "friendly_id"
 gem "gutentag"
 gem "honeybadger", "~> 4.9"
 gem "scout_apm"
+gem "sentry-ruby"
+gem "sentry-rails"
 
 group :development, :test do
   # Start debugger with binding.b [https://github.com/ruby/debug]
