@@ -8,10 +8,4 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :success
   end
-
-  test "should report failures to CI" do
-    get "/bad"
-
-    assert_response :success
-  end
 end
