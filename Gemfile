@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.0.2"
+ruby "3.0.3"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.0.alpha2"
@@ -22,10 +22,12 @@ gem "stimulus-rails", ">= 0.4.0" # Hotwire's modest JavaScript framework [https:
 gem "turbo-rails", ">= 0.7.11" # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# 3rd party gems
+# 3rd party libraries
 gem "friendly_id"
 gem "gutentag"
-gem "honeybadger", "~> 4.9"
+
+# Monitoring
+gem "honeybadger"
 gem "scout_apm"
 gem "sentry-ruby"
 gem "sentry-rails"
