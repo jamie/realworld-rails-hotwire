@@ -36,5 +36,16 @@ blocks:
             - cache store
             - 'bundle exec rake db:setup'
             - bundle exec rake test
-            - test-results publish test/reports
-            - test-results gen-pipeline-report
+
+global_job_config:
+  epilogue:
+    always:
+      commands:
+        - '[[ -d test/reports ]] && test-results publish test/reports/*.xml'
+
+after_pipeline:
+  task:
+    jobs:
+      - name: Publish Results
+        commands:
+          - test-results gen-pipeline-report
