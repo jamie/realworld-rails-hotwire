@@ -36,3 +36,5 @@ blocks:
             - cache store
             - 'bundle exec rake db:setup'
             - bundle exec rake test
+            - test-results publish test/reports
+            - test-results gen-pipeline-report
