@@ -30,7 +30,7 @@ jobs:
           paths:
             - vendor/bundle
       - run:
-          name: rails test
+          name: rubocop
           command: bundle exec rubocop
 
   rails-test:
