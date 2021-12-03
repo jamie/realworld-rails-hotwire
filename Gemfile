@@ -60,5 +60,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 
-  gem 'minitest-ci' # JUnit XML formatter
+  gem "minitest-ci" # JUnit XML formatter
 end
