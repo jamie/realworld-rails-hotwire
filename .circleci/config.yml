@@ -10,6 +10,20 @@ orbs:
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
+  rubocop:
+    docker:
+      - image: cimg/ruby:3.0.3
+    executor: ruby/default
+    steps:
+      - checkout
+      - run:
+          name: Which bundler?
+          command: bundle -v
+      - ruby/bundle-install
+      - run:
+          name: rails test
+          command: bundle exec rubocop
+
   rails-test:
     docker:
       - image: cimg/ruby:3.0.3
@@ -32,4 +46,6 @@ workflows:
   sample: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
     jobs:
-      - rails-test
+      - rubocop:
+      - rails-test:
+          requires: rubocop
