@@ -299,7 +299,7 @@ DEPENDENCIES
   debug (>= 1.0.0)
   friendly_id
   gutentag
-  honeybadger (~> 4.9)
+  honeybadger
   image_processing (~> 1.2)
   importmap-rails (>= 0.3.4)
   jbuilder (~> 2.7)
