@@ -33,3 +33,6 @@
 
 # Local Redis memory dump
 dump.rdb
+
+# Test log files for CI
+test/reports/*
