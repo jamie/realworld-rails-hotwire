@@ -68,6 +68,9 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
+    appsignal (3.0.26)
+      rack
+    ast (2.4.2)
     bindex (0.8.1)
     bootsnap (1.11.1)
       msgpack (~> 1.2)
@@ -91,6 +94,7 @@ GEM
     erubi (1.10.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    honeybadger (4.12.1)
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.0.3)
@@ -130,6 +134,8 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.4-x86_64-darwin)
       racc (~> 1.4)
+    parser (3.1.2.0)
+      ast (~> 2.4.1)
     public_suffix (4.0.7)
     puma (5.6.4)
       nio4r (~> 2.0)
@@ -170,10 +176,20 @@ GEM
       io-console (~> 0.5)
     rexml (3.2.5)
     rubyzip (2.3.2)
+    scout_apm (5.1.1)
+      parser
     selenium-webdriver (4.1.0)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
+    sentry-rails (5.3.1)
+      railties (>= 5.0)
+      sentry-ruby-core (~> 5.3.1)
+    sentry-ruby (5.3.1)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      sentry-ruby-core (= 5.3.1)
+    sentry-ruby-core (5.3.1)
+      concurrent-ruby
     sprockets (4.0.3)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -212,15 +228,20 @@ PLATFORMS
   x86_64-darwin-18
 
 DEPENDENCIES
+  appsignal
   bootsnap
   capybara
   debug
+  honeybadger
   importmap-rails
   jbuilder
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.4)
   redis (~> 4.0)
+  scout_apm
   selenium-webdriver
+  sentry-rails
+  sentry-ruby
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails
