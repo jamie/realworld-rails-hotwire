@@ -21,6 +21,12 @@ For more information on how to this works with other frontends/backends, head ov
 
 > npm install, npm start, etc.
 
+---
+
+Rails-generated
+
+---
+
 # README
 
 This README would normally document whatever steps are necessary to get the
