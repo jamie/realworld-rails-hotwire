@@ -12,20 +12,20 @@
           <li>That email is already taken</li>
         </ul>
 
-        <form>
+        <%= form_with model: @user do |f| %>
           <fieldset class="form-group">
-            <input class="form-control form-control-lg" type="text" placeholder="Your Name">
+            <%= f.text_field :username, placeholder: "Your Name", class: "form-control form-control-lg" %>
           </fieldset>
           <fieldset class="form-group">
-            <input class="form-control form-control-lg" type="text" placeholder="Email">
+            <%= f.text_field :email, placeholder: "Email", class: "form-control form-control-lg" %>
           </fieldset>
           <fieldset class="form-group">
-            <input class="form-control form-control-lg" type="password" placeholder="Password">
+            <%= f.text_field :password, placeholder: "Password", class: "form-control form-control-lg" %>
           </fieldset>
           <button class="btn btn-lg btn-primary pull-xs-right">
             Sign up
           </button>
-        </form>
+        <% end %>
       </div>
 
     </div>
