@@ -52,7 +52,7 @@ Error and performance monitoring:
 
 - https://appsignal.com/ - Performance/Errors/Uptime
 - https://www.honeybadger.io/ - Errors/Uptime
-- https://scoutapm.com/ - Performance [![Scout APM](https://raw.githubusercontent.com/jamie/realworld-rails-hotwire/master/public/scoutapm.png)](https://ter.li/h8k29r)
+- https://scoutapm.com/ - Performance [![Scout APM](https://raw.githubusercontent.com/jamie/realworld-rails-hotwire/main/public/scoutapm.png)](https://ter.li/h8k29r)
 - https://sentry.io/ - Performance/Errors
 
 
