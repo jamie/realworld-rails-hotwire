@@ -37,3 +37,4 @@ development:
 production:
   <<: *defaults
   active: true
+  revision: <%= ENV['RENDER_GIT_COMMIT'] %>
