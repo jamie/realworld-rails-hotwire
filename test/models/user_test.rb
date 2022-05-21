@@ -1,7 +1,9 @@
 require "test_helper"
 
 class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "password is encrypted" do
+    user = User.new(password: 'password')
+    refute_includes user.attributes.values, 'password'
+    assert user.authenticate('password')
+  end
 end

@@ -71,6 +71,7 @@ GEM
     appsignal (3.0.26)
       rack
     ast (2.4.2)
+    bcrypt (3.1.18)
     bindex (0.8.1)
     bootsnap (1.11.1)
       msgpack (~> 1.2)
@@ -232,6 +233,7 @@ PLATFORMS
 
 DEPENDENCIES
   appsignal
+  bcrypt (~> 3.1.7)
   bootsnap
   capybara
   debug
