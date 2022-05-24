@@ -17,7 +17,7 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="<%= params[:controller] %> <%= params[:action] %>">
 
     <nav class="navbar navbar-light">
       <div class="container">
@@ -38,16 +38,10 @@
             </a>
           </li>
           <% if current_user %>
-          <li class="nav-item">
-            <a class="nav-link" href="">Sign out</a>
-          </li>
+          <li class="nav-item"><%= link_to 'Sign out', session_path, data: { "turbo-method": :delete }, class: 'nav-link' %></li>
           <% else %>
-          <li class="nav-item">
-            <a class="nav-link" href="">Sign in</a>
-          </li>
-          <li class="nav-item">
-            <%= link_to 'Sign up', new_user_path, class: 'nav-link' %>
-          </li>
+          <li class="nav-item"><%= link_to 'Sign in', new_session_path, class: 'nav-link' %></li>
+          <li class="nav-item"><%= link_to 'Sign up', new_user_path, class: 'nav-link' %></li>
           <% end %>
         </ul>
       </div>
