@@ -56,3 +56,11 @@ We are using the following services for application monitoring (performance, err
 | Error Tracking                         | [<img height="60px" title="HoneyBadger" src="https://raw.githubusercontent.com/jamie/realworld-rails-hotwire/main/public/honeybadger-logo.svg" />](https://honeybadger.io) |
 | Error Tracking, Performance Monitoring | [<img height="60px" title="Scout APM" src="https://raw.githubusercontent.com/jamie/realworld-rails-hotwire/main/public/scoutapm-logo.png" />](https://ter.li/h8k29r) |
 | Error Tracking, Performance Monitoring | [<img height="60px" title="Sentry" src="https://raw.githubusercontent.com/jamie/realworld-rails-hotwire/main/public/sentry-logo.png" />](https://sentry.io/) |
+
+Continuous Integration services provided by:
+
+| Service | Status |
+|---|---|
+| [Ruby CI](https://ruby.ci/) | ![minitest](https://ruby.ci/badges/a266a09c-6bf7-4c6c-b6b5-e786612e0052/minitest) ![rubocop](https://ruby.ci/badges/a266a09c-6bf7-4c6c-b6b5-e786612e0052/rubocop) ![bundler_audit](https://ruby.ci/badges/a266a09c-6bf7-4c6c-b6b5-e786612e0052/bundler_audit) |
+| ... more to follow | |
+
