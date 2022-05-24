@@ -1,0 +1,10 @@
+inherit_gem:
+  standard: config/base.yml
+
+require:
+- rubocop-rails
+- standard
+
+AllCops:
+  TargetRubyVersion: 3.1
+  NewCops: enable

@@ -50,6 +50,13 @@ gem "bootsnap", require: false
 
 #### Non-default Gems
 
+# Code quality
+group :development do
+  gem "rubocop"
+  gem "rubocop-rails"
+  gem "standard"
+end
+
 # Monitoring
 gem "appsignal"
 gem "honeybadger"
