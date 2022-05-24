@@ -1,42 +1,34 @@
 # ![RealWorld Example App](logo.png)
 
-> ### [YOUR_FRAMEWORK] codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld) spec and API.
+> ### [Ruby on Rails](https://rubyonrails.org/) codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld) spec and API.
 
 
-### [Demo](https://demo.realworld.io/)&nbsp;&nbsp;&nbsp;&nbsp;[RealWorld](https://github.com/gothinkster/realworld)
+## NB: This project is still WIP
 
+### [Demo](https://realworld-rails-with-hotwire.onrender.com)&nbsp;&nbsp;&nbsp;&nbsp;[RealWorld](https://github.com/gothinkster/realworld)
 
-This codebase was created to demonstrate a fully fledged fullstack application built with **[YOUR_FRAMEWORK]** including CRUD operations, authentication, routing, pagination, and more.
+This codebase was created to demonstrate a fully fledged fullstack application built with **Ruby on Rails 7** including CRUD operations, authentication, routing, pagination, and more.
 
-We've gone to great lengths to adhere to the **[YOUR_FRAMEWORK]** community styleguides & best practices.
+Unlike a typical RealWorld application with a pure frontend/backend separation connected via API, this application is implemented with **[Hotwire](https://hotwired.dev/)** for rich frontend interaction.
 
-For more information on how to this works with other frontends/backends, head over to the [RealWorld](https://github.com/gothinkster/realworld) repo.
+Additionally, the target here is as vanilla/batteries-included as possible, so we're using Minitest rather than the more popular RSpec, for example. I am bringing in non-functional dependencies however, for code quality & monitoring purposes.
 
 
 # How it works
 
-> Describe the general architecture of your app here
+> TODO: Describe the general architecture of your app here
 
 # Getting started
 
-> npm install, npm start, etc.
+Production is deployed via `bin/render_build.sh`, but locally all you need is Ruby 3.1 (or see `.ruby-version`) and run:
 
----
+    bundle install
+    bundle exec rails db:migrate
+    bundle exec rails db:seed
+    bundle exec rails server
 
-Rails-generated
 
----
-
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
+# Configuration
 
 * Configuration
 
@@ -44,18 +36,23 @@ Things you may want to cover:
 
 * Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+# Tests
 
-Error and performance monitoring:
-
-- https://appsignal.com/ - Performance/Errors/Uptime
-- https://www.honeybadger.io/ - Errors/Uptime
-- https://scoutapm.com/ - Performance [![Scout APM](https://raw.githubusercontent.com/jamie/realworld-rails-hotwire/main/public/scoutapm.png)](https://ter.li/h8k29r)
-- https://sentry.io/ - Performance/Errors
+    bundle exec rails db:migrate:test
+    bundle exec rails test
+    bundle exec rails test:system
 
 
-* Deployment instructions
+# Services
 
-* ...
+Currently there are no extra processes to run - should it be necessary to pull in ActiveJob it will just be an in-memory runner.
+
+We are using the following services for application monitoring (performance, errors, etc), which all graciously have a free-for-opensource trial plan.
+
+| Service | Notes |
+|---|---|---|---|
+| [![AppSignal](https://raw.githubusercontent.com/jamie/realworld-rails-hotwire/main/public/appsignal-logo.svg =x250)](https://appsignal.com/) | Performance Monitoring, Error Tracking |
+| [![HoneyBadger](https://raw.githubusercontent.com/jamie/realworld-rails-hotwire/main/public/honeybadger-logo.svg =x250)](https://honeybadger.io) | Error Tracking |
+| [![Scout APM](https://raw.githubusercontent.com/jamie/realworld-rails-hotwire/main/public/scoutapm-logo.png =x250)](https://ter.li/h8k29r) | Performance Monitoring, Error Tracking | 
+| [![Sentry](https://raw.githubusercontent.com/jamie/realworld-rails-hotwire/main/public/sentry-logo.png =x250)](https://sentry.io/) | Performance Monitoring, Error Tracking | 
