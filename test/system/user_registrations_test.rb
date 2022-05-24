@@ -8,7 +8,7 @@ class UserRegistrationsTest < ApplicationSystemTestCase
     within ".auth-page" do
       fill_in :user_username, with: "charlie"
       fill_in :user_email, with: "charlie@example.com"
-      fill_in :user_password, with: "passwordA1"
+      fill_in :user_password, with: "password"
       click_on "Sign up"
     end
 
