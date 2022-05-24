@@ -51,7 +51,7 @@ Currently there are no extra processes to run - should it be necessary to pull i
 We are using the following services for application monitoring (performance, errors, etc), which all graciously have a free-for-opensource trial plan.
 
 | Service | Notes |
-|---|---|---|---|
+|---|---|
 | [![AppSignal](https://raw.githubusercontent.com/jamie/realworld-rails-hotwire/main/public/appsignal-logo.svg =x250)](https://appsignal.com/) | Performance Monitoring, Error Tracking |
 | [![HoneyBadger](https://raw.githubusercontent.com/jamie/realworld-rails-hotwire/main/public/honeybadger-logo.svg =x250)](https://honeybadger.io) | Error Tracking |
 | [![Scout APM](https://raw.githubusercontent.com/jamie/realworld-rails-hotwire/main/public/scoutapm-logo.png =x250)](https://ter.li/h8k29r) | Performance Monitoring, Error Tracking | 
