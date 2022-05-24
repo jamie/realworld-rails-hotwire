@@ -6,7 +6,7 @@ class UserSessionsTest < ApplicationSystemTestCase
 
     within ".auth-page" do
       fill_in :user_email, with: user.email
-      fill_in :user_password, with: 'password'
+      fill_in :user_password, with: "password"
       click_on "Sign in"
     end
   end
@@ -17,7 +17,7 @@ class UserSessionsTest < ApplicationSystemTestCase
 
     within ".auth-page" do
       fill_in :user_email, with: users(:one).email
-      fill_in :user_password, with: 'password'
+      fill_in :user_password, with: "password"
       click_on "Sign in"
     end
 
@@ -30,7 +30,7 @@ class UserSessionsTest < ApplicationSystemTestCase
 
     within ".auth-page" do
       fill_in :user_email, with: users(:one).email
-      fill_in :user_password, with: 'password'
+      fill_in :user_password, with: "password"
       click_on "Sign in"
     end
 
