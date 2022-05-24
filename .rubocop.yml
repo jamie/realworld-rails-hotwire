@@ -11,3 +11,8 @@ AllCops:
   Exclude:
   - "db/schema.rb"
   - "vendor/**/*"
+
+Style/StringLiterals:
+  Exclude:
+  # ruby.ci appends a few helper gems to the bottom of the Gemfile which we don't care to lint
+  - "Gemfile"
