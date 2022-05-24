@@ -48,11 +48,11 @@ Production is deployed via `bin/render_build.sh`, but locally all you need is Ru
 
 Currently there are no extra processes to run - should it be necessary to pull in ActiveJob it will just be an in-memory runner.
 
-We are using the following services for application monitoring (performance, errors, etc), which all graciously have a free-for-opensource trial plan.
+We are using the following services for application monitoring (performance, errors, etc), which all graciously have a free or free-for-opensource trial plan.
 
-| Service | Notes |
+| Feature | Service |
 |---|---|
-| [![AppSignal](https://raw.githubusercontent.com/jamie/realworld-rails-hotwire/main/public/appsignal-logo.svg =x250)](https://appsignal.com/) | Performance Monitoring, Error Tracking |
-| [![HoneyBadger](https://raw.githubusercontent.com/jamie/realworld-rails-hotwire/main/public/honeybadger-logo.svg =x250)](https://honeybadger.io) | Error Tracking |
-| [![Scout APM](https://raw.githubusercontent.com/jamie/realworld-rails-hotwire/main/public/scoutapm-logo.png =x250)](https://ter.li/h8k29r) | Performance Monitoring, Error Tracking | 
-| [![Sentry](https://raw.githubusercontent.com/jamie/realworld-rails-hotwire/main/public/sentry-logo.png =x250)](https://sentry.io/) | Performance Monitoring, Error Tracking | 
+| Error Tracking, Performance Monitoring | [<img height="60px" title="AppSignal" src="https://raw.githubusercontent.com/jamie/realworld-rails-hotwire/main/public/appsignal-logo.svg" />](https://appsignal.com/) |
+| Error Tracking                         | [<img height="60px" title="HoneyBadger" src="https://raw.githubusercontent.com/jamie/realworld-rails-hotwire/main/public/honeybadger-logo.svg" />](https://honeybadger.io) |
+| Error Tracking, Performance Monitoring | [<img height="60px" title="Scout APM" src="https://raw.githubusercontent.com/jamie/realworld-rails-hotwire/main/public/scoutapm-logo.png" />](https://ter.li/h8k29r) |
+| Error Tracking, Performance Monitoring | [<img height="60px" title="Sentry" src="https://raw.githubusercontent.com/jamie/realworld-rails-hotwire/main/public/sentry-logo.png" />](https://sentry.io/) |
