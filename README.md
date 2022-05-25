@@ -66,3 +66,6 @@ Continuous Integration services provided by:
 | [Ruby CI](https://ruby.ci/) | ![minitest](https://ruby.ci/badges/a266a09c-6bf7-4c6c-b6b5-e786612e0052/minitest) ![rubocop](https://ruby.ci/badges/a266a09c-6bf7-4c6c-b6b5-e786612e0052/rubocop) ![bundler_audit](https://ruby.ci/badges/a266a09c-6bf7-4c6c-b6b5-e786612e0052/bundler_audit) |
 | [CircleCI](https://circleci.com/) | [![CircleCI](https://circleci.com/gh/jamie/realworld-rails-hotwire/tree/main.svg?style=svg)](https://circleci.com/gh/jamie/realworld-rails-hotwire/tree/main) |
 | [Semaphore](https://semaphoreci.com/) | [![Build Status](https://tracefunc.semaphoreci.com/badges/realworld-rails-hotwire/branches/master.svg?style=shields)](https://tracefunc.semaphoreci.com/projects/realworld-rails-hotwire) |
+
+TODO: Semaphore needs some junit output to report file info
+TODO: CircleCI needs setup w/ headless chrome for system tests
