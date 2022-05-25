@@ -1,0 +1,60 @@
+version: v1.0
+name: Test MyApp
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu2004
+global_job_config:
+  epilogue:
+    always:
+      commands:
+        - '[[ -d test/reports ]] && test-results publish test/reports/*.xml'
+blocks:
+  - name: Lint
+    task:
+      env_vars:
+        - name: DATABASE_URL
+          value: 'postgresql://postgres:@0.0.0.0:5432/myapp_test'
+        - name: RAILS_ENV
+          value: test
+      jobs:
+        - name: rubocop
+          commands:
+            - checkout
+            - sem-version ruby 3.1.2
+            - cache restore
+            - bundle config set --local path 'vendor/bundle'
+            - bundle install
+            - cache store
+            - bundle exec rubocop
+  - name: Tests
+    task:
+      jobs:
+        - name: rails test
+          commands:
+            - checkout
+            # - sem-service start postgres 11
+            - sem-version ruby 3.1.2
+            - cache restore
+            - bundle config set --local path 'vendor/bundle'
+            - bundle install
+            - cache store
+            - 'bundle exec rake db:setup'
+            - bundle exec rake test
+        - name: 'rails test:system'
+          commands:
+            - checkout
+            # - sem-service start postgres 11
+            - sem-version ruby 3.1.2
+            - cache restore
+            - bundle config set --local path 'vendor/bundle'
+            - bundle install
+            - cache store
+            - 'bundle exec rake db:setup'
+            - 'bundle exec rake test:system'
+after_pipeline:
+  task:
+    jobs:
+      - name: Publish Results
+        commands:
+          - test-results gen-pipeline-report

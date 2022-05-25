@@ -64,5 +64,5 @@ Continuous Integration services provided by:
 | Service | Status |
 |---|---|
 | [Ruby CI](https://ruby.ci/) | ![minitest](https://ruby.ci/badges/a266a09c-6bf7-4c6c-b6b5-e786612e0052/minitest) ![rubocop](https://ruby.ci/badges/a266a09c-6bf7-4c6c-b6b5-e786612e0052/rubocop) ![bundler_audit](https://ruby.ci/badges/a266a09c-6bf7-4c6c-b6b5-e786612e0052/bundler_audit) |
-| TBD: [CircleCI](https://circleci.com/) | |
-
+| [CircleCI](https://circleci.com/) | [![CircleCI](https://circleci.com/gh/jamie/realworld-rails-hotwire/tree/main.svg?style=svg)](https://circleci.com/gh/jamie/realworld-rails-hotwire/tree/main) |
+| [Semaphore](https://semaphoreci.com/) | [![Build Status](https://tracefunc.semaphoreci.com/badges/realworld-rails-hotwire/branches/master.svg?style=shields)](https://tracefunc.semaphoreci.com/projects/realworld-rails-hotwire) |
