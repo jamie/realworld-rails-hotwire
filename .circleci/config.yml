@@ -52,10 +52,27 @@ jobs:
       - run:
           name: rails test
           command: bundle exec rails test
-      # CircleCI image doesn't run Chrome by default, need to set up separate
-      # - run:
-      #     name: rails test
-      #     command: bundle exec rails test:system
+      - store_test_results:
+          path: test/reports
+  rails-test-system:
+    docker:
+      - image: cimg/ruby:3.1.2-browsers
+    executor: ruby/default
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - gem-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+            - gem-cache-v1-{{ arch }}-{{ .Branch }}
+            - gem-cache-v1
+      - ruby/bundle-install
+      - save_cache:
+          key: gem-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      - run:
+          name: rails test:system
+          command: bundle exec rails test:system
       - store_test_results:
           path: test/reports
 
@@ -67,5 +84,8 @@ workflows:
     jobs:
       - rubocop
       - rails-test:
+          requires:
+            - rubocop
+      - rails-test-system:
           requires:
             - rubocop
