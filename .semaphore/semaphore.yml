@@ -40,7 +40,7 @@ blocks:
             - bundle install
             - cache store
             - 'bundle exec rails db:setup'
-            - 'bundle exec rails test --junit'
+            - 'bundle exec rails test --junit --junit-filename=test/reports/report.xml'
         - name: 'rails test:system'
           commands:
             - checkout
