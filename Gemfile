@@ -64,6 +64,11 @@ gem "scout_apm"
 gem "sentry-ruby"
 gem "sentry-rails"
 
+# CI
+group :test do
+  gem "minitest-junit"
+end
+
 #### Non-default Gems
 
 group :development, :test do

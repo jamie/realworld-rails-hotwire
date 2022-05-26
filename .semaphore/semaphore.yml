@@ -40,7 +40,7 @@ blocks:
             - bundle install
             - cache store
             - 'bundle exec rake db:setup'
-            - bundle exec rake test
+            - 'bundle exec rake test --junit'
         - name: 'rails test:system'
           commands:
             - checkout
