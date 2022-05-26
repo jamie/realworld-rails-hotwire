@@ -39,8 +39,8 @@ blocks:
             - bundle config set --local path 'vendor/bundle'
             - bundle install
             - cache store
-            - 'bundle exec rake db:setup'
-            - 'bundle exec rake test --junit'
+            - 'bundle exec rails db:setup'
+            - 'bundle exec rails test --junit'
         - name: 'rails test:system'
           commands:
             - checkout
@@ -50,8 +50,8 @@ blocks:
             - bundle config set --local path 'vendor/bundle'
             - bundle install
             - cache store
-            - 'bundle exec rake db:setup'
-            - 'bundle exec rake test:system'
+            - 'bundle exec rails db:setup'
+            - 'bundle exec rails test:system'
 after_pipeline:
   task:
     jobs:
