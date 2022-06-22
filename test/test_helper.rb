@@ -2,7 +2,7 @@ ENV["RAILS_ENV"] ||= "test"
 require_relative "../config/environment"
 
 require "buildkite/test_collector"
-BuildKite::TestCollector.configure(hook: :minitest)
+Buildkite::TestCollector.configure(hook: :minitest)
 
 require "rails/test_help"
 
