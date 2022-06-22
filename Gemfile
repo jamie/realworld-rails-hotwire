@@ -67,6 +67,7 @@ gem "sentry-rails"
 # CI
 group :test do
   gem "minitest-junit"
+  gem "buildkite-test_collector"
 end
 
 #### Non-default Gems
