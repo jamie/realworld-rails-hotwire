@@ -63,6 +63,7 @@ gem "honeybadger"
 gem "scout_apm"
 gem "sentry-ruby"
 gem "sentry-rails"
+gem "skylight"
 
 # CI
 group :test do
