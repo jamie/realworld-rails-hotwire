@@ -74,7 +74,7 @@ jobs:
             - vendor/bundle
       - run:
           name: rails test:system
-          command: bundle exec rails test:system --junit --junit-filename=test/reports/report.xml
+          command: bundle exec rails test test/system --junit --junit-filename=test/reports/report.xml
       - store_test_results:
           path: test/reports
 
