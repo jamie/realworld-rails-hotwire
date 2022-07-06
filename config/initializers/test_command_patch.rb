@@ -11,7 +11,7 @@ module Rails
 
       # Define Thor tasks to avoid going through Rake and booting twice when using bin/rails test:*
 
-      Rails::TestUnit::Runner::TEST_FOLDERS.each do |name|
+      [:models, :helpers, :channels, :controllers, :mailers, :integration, :jobs, :mailboxes].each do |name|
         define_method(name) do |*|
           args.prepend("test/#{name}")
           perform
