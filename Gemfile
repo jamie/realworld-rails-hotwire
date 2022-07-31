@@ -50,6 +50,9 @@ gem "bootsnap", require: false
 
 #### Non-default Gems
 
+# Config
+gem "dotenv-rails", groups: [:development, :test]
+
 # Code quality
 group :development do
   gem "rubocop"

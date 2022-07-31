@@ -37,3 +37,6 @@
 
 # Test artifacts
 report.xml
+
+# Development configuration
+.env
