@@ -52,6 +52,7 @@ We are using the following services for application monitoring (performance, err
 
 | Feature | Service |
 |---|---|
+| Error Tracking, Performance Monitoring | [Airbrake](https://airbrake.io/)
 | Error Tracking, Performance Monitoring | [<img height="60px" title="AppSignal" src="https://raw.githubusercontent.com/jamie/realworld-rails-hotwire/main/public/appsignal-logo.svg" />](https://appsignal.com/) |
 | Error Tracking                         | [<img height="60px" title="HoneyBadger" src="https://raw.githubusercontent.com/jamie/realworld-rails-hotwire/main/public/honeybadger-logo.svg" />](https://honeybadger.io) |
 | Error Tracking, Performance Monitoring | [<img height="60px" title="Scout APM" src="https://raw.githubusercontent.com/jamie/realworld-rails-hotwire/main/public/scoutapm-logo.png" />](https://ter.li/h8k29r) |
