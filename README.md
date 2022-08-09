@@ -71,3 +71,6 @@ Continuous Integration services provided by:
 
 TODO: Semaphore needs some junit output to report file info
 TODO: CircleCI needs setup w/ headless chrome for system tests
+TODO: CI with https://buddy.works
+TODO: CI with https://drone.io/ / https://harness.io
+
