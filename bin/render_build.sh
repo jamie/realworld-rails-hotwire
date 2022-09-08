@@ -18,9 +18,9 @@ curl \
   https://api.airbrake.io/api/v4/projects/439210/deploys?key=$AIRBRAKE_PROJECT_KEY
 
 # Notify honeybadger of deploy
-bundle exec honeybadger deploy \
-  --api-key=$HONEYBADGER_API_KEY \
-  --environment=$RAILS_ENV \
-  --repository=https://github.com/$RENDER_GIT_REPO_SLUG \
-  --revision=$RENDER_GIT_COMMIT \
-  --user=render
+#bundle exec honeybadger deploy \
+#  --api-key=$HONEYBADGER_API_KEY \
+#  --environment=$RAILS_ENV \
+#  --repository=https://github.com/$RENDER_GIT_REPO_SLUG \
+#  --revision=$RENDER_GIT_COMMIT \
+#  --user=render
