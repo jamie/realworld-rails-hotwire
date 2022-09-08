@@ -19,7 +19,7 @@ module Realworld
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
-    # Deploying to Render w/ sqlite for free
-    config.active_record.sqlite3_production_warning = false
+    # Deploying to Render w/ sqlite for free, squelch warning
+    # config.active_record.sqlite3_production_warning = false
   end
 end
