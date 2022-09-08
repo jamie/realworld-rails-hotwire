@@ -61,7 +61,7 @@ group :development do
 end
 
 # Monitoring
-gem "airbrake-ruby"
+gem "airbrake"
 gem "appsignal"
 gem "honeybadger"
 gem "scout_apm"
