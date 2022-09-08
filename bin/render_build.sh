@@ -22,3 +22,4 @@ bundle exec honeybadger deploy \
   --environment=$RAILS_ENV \
   --repository=https://github.com/$RENDER_GIT_REPO_SLUG \
   --revision=$RENDER_GIT_COMMIT
+  --user=render
