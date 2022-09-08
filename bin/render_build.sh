@@ -2,7 +2,8 @@
 # exit on error
 set -o errexit
 
-mv production.key config/credentials/production.key
+# Note: render will rm production.key after booting app
+cp production.key config/credentials/production.key
 bundle install
 bundle exec rake assets:precompile
 bundle exec rake assets:clean
