@@ -21,5 +21,5 @@ bundle exec honeybadger deploy \
   --api-key=$HONEYBADGER_API_KEY \
   --environment=$RAILS_ENV \
   --repository=https://github.com/$RENDER_GIT_REPO_SLUG \
-  --revision=$RENDER_GIT_COMMIT
+  --revision=$RENDER_GIT_COMMIT \
   --user=render
