@@ -69,8 +69,8 @@ Continuous Integration services provided by:
 | [Semaphore](https://semaphoreci.com/) | [![Build Status](https://tracefunc.semaphoreci.com/badges/realworld-rails-hotwire/branches/master.svg?style=shields)](https://tracefunc.semaphoreci.com/projects/realworld-rails-hotwire) |
 | [Buildkite](https://buildkite.com/) | [![Build status](https://badge.buildkite.com/e3de6a64dbb5ce425cd3eca032b5ad03bcabc81c890fb9404b.svg)](https://buildkite.com/tracefunc/realworld-rails-hotwire) [view pipeline](https://buildkite.com/tracefunc/realworld-rails-hotwire) |
 
-TODO: Semaphore needs some junit output to report file info
-TODO: CircleCI needs setup w/ headless chrome for system tests
-TODO: CI with https://buddy.works
-TODO: CI with https://drone.io/ / https://harness.io
+- TODO: Semaphore needs some junit output to report file info
+- TODO: CircleCI needs setup w/ headless chrome for system tests
+- TODO: CI with https://buddy.works
+- TODO: CI with https://drone.io/ / https://harness.io
 
