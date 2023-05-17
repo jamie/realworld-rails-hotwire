@@ -1,9 +1,11 @@
 inherit_gem:
   standard: config/base.yml
+  standard-rails: config/base.yml
 
 require:
 - rubocop-rails
 - standard
+- standard-rails
 
 AllCops:
   TargetRubyVersion: 3.1
@@ -11,8 +13,3 @@ AllCops:
   Exclude:
   - "db/schema.rb"
   - "vendor/**/*"
-
-Style/StringLiterals:
-  Exclude:
-  # ruby.ci appends a few helper gems to the bottom of the Gemfile which we don't care to lint
-  - "Gemfile"

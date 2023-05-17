@@ -55,9 +55,8 @@ gem "dotenv-rails", groups: [:development, :test]
 
 # Code quality
 group :development do
-  gem "rubocop"
-  gem "rubocop-rails"
   gem "standard"
+  gem "standard-rails"
 end
 
 # Monitoring
@@ -99,3 +98,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+# standard:disable all
