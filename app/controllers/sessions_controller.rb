@@ -4,18 +4,26 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by(email: params[:user][:email])
-    if @user.authenticate(params[:user][:password])
-      session[:user_id] = @user.id
-      redirect_to root_url
+    if (@user = User.authenticate_by(authentication_params))
+      sign_in @user
+      redirect_to root_url, notice: "You're now signed in."
     else
-      render :new
+      render :new, status: :unprocessable_entity, alert: "Invalid email or password."
     end
   end
 
   def destroy
-    session[:user_id] = nil
+    sign_out
     # 303 See Other forces verb to GET, seems required for Turbo
     redirect_to root_url, status: :see_other
+  end
+
+  private
+
+  def authentication_params
+    {
+      email: params[:user][:email],
+      password: params[:user][:password]
+    }
   end
 end
