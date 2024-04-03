@@ -33,25 +33,23 @@ blocks:
         - name: rails test
           commands:
             - checkout
-            # - sem-service start postgres 11
             - sem-version ruby 3.1.2
             - cache restore
             - bundle config set --local path 'vendor/bundle'
             - bundle install
             - cache store
             - 'bundle exec rails db:setup'
-            - 'bundle exec rails test --junit --junit-filename=test/reports/report.xml'
+            - bundle exec rails test --junit --junit-filename=test/reports/report.xml
         - name: 'rails test:system'
           commands:
             - checkout
-            # - sem-service start postgres 11
             - sem-version ruby 3.1.2
             - cache restore
             - bundle config set --local path 'vendor/bundle'
             - bundle install
             - cache store
             - 'bundle exec rails db:setup'
-            - 'bundle exec rails test:system'
+            - 'bundle exec rails test:system --junit --junit-filename=test/reports/report.xml'
 after_pipeline:
   task:
     jobs:
