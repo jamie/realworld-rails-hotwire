@@ -13,7 +13,7 @@ orbs:
 jobs:
   rubocop:
     docker:
-      - image: cimg/ruby:3.1.2
+      - image: cimg/ruby:3.2.2
     executor: ruby/default
     steps:
       - checkout
@@ -34,7 +34,7 @@ jobs:
 
   rails-test:
     docker:
-      - image: cimg/ruby:3.1.2
+      - image: cimg/ruby:3.2.2
     executor: ruby/default
     steps:
       - checkout
@@ -56,7 +56,7 @@ jobs:
 
   rails-test-system:
     docker:
-      - image: cimg/ruby:3.1.2-browsers
+      - image: cimg/ruby:3.2.2-browsers
     executor: ruby/default
     steps:
       - browser-tools/install-chrome
