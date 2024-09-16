@@ -59,6 +59,7 @@ We are using the following services for application monitoring (performance, err
 | Error Tracking, Performance Monitoring | [<img height="60px" title="Sentry" src="https://raw.githubusercontent.com/jamie/realworld-rails-hotwire/main/public/sentry-logo.png" />](https://sentry.io/) |
 | Performance Monitoring | [Skylight.io](https://www.skylight.io/) |
 | | TBD: [Datadog](https://www.datadoghq.com/) |
+| | TBD: [Honeycomb](https://www.honeycomb.io/) |
 
 Continuous Integration services provided by:
 
