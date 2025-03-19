@@ -1,0 +1,17 @@
+<div class="article-preview">
+  <div class="article-meta">
+    <a href="profile.html"><img src="http://i.imgur.com/Qr71crq.jpg"/></a>
+    <div class="info">
+      <a href="" class="author"><%= post.user.username %></a>
+      <span class="date"><%= post.created_at.strftime("%B %d") %></span>
+    </div>
+    <button class="btn btn-outline-primary btn-sm pull-xs-right">
+      <i class="ion-heart"></i> 29
+    </button>
+  </div>
+  <a href="<%= post_path(post) %>" class="preview-link">
+    <h1><%= post.title %></h1>
+    <p><%= post.body.to_plain_text %></p>
+    <span>Read more...</span>
+  </a>
+</div>
