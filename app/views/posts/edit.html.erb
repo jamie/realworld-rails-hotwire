@@ -1,12 +1,11 @@
 <% content_for :title, "Editing post" %>
 
-<h1>Editing post</h1>
-
-<%= render "form", post: @post %>
-
-<br>
-
-<div>
-  <%= link_to "Show this post", @post %> |
-  <%= link_to "Back to posts", posts_path %>
+<div class="editor-page">
+  <div class="container page">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1 col-xs-12">
+        <%= render "form", post: @post %>
+      </div>
+    </div>
+  </div>
 </div>

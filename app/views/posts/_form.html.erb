@@ -1,8 +1,7 @@
 <%= form_with(model: post) do |form| %>
   <% if post.errors.any? %>
-    <div style="color: red">
+    <div class="alert alert-danger">
       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
       <ul>
         <% post.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -11,22 +10,19 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div>
-    <%= form.label :body, style: "display: block" %>
-    <%= form.rich_textarea :body %>
-  </div>
-
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
+  <fieldset class="form-group">
+    <%= form.text_field :title, class: "form-control form-control-lg", placeholder: "Post Title" %>
+  </fieldset>
+  <fieldset class="form-group">
+    <%= form.text_area :body, class: "form-control", rows: 8, placeholder: "Write your post (in markdown)" %>
+  </fieldset>
+  <fieldset class="form-group">
+    <input class="form-control" type="text" placeholder="Enter tags">
+    <div class="tag-list">
+      <span class="label label-pill label-default"><i class="ion-close-round"></i> programming</span>
+      <span class="label label-pill label-default"><i class="ion-close-round"></i> javascript</span>
+      <span class="label label-pill label-default"><i class="ion-close-round"></i> webdev</span>
+    </div>
+  </fieldset>
+  <%= form.submit class: "btn btn-lg btn-primary pull-xs-right" %>
 <% end %>
