@@ -11,7 +11,7 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     post session_url, params: {
       user: {
         email: user.email,
-        password: "password123"
+        password: "password"
       }
     }
 

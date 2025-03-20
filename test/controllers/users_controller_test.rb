@@ -17,6 +17,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
       }
     end
 
+    assert_response :redirect
     assert_redirected_to root_url
     assert_equal "You're now signed in.", flash[:notice]
   end
@@ -32,7 +33,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
       }
     end
 
-    assert_no_redirect
+    assert_response :success # not :redirect
   end
 
   # test "the truth" do

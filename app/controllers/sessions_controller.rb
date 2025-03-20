@@ -8,14 +8,15 @@ class SessionsController < ApplicationController
       sign_in @user
       redirect_to root_url, notice: "You're now signed in."
     else
-      render :new, status: :unprocessable_entity, alert: "Invalid email or password."
+      flash.now[:alert] = "Invalid email or password."
+      render :new, status: :unprocessable_entity
     end
   end
 
   def destroy
     sign_out
     # 303 See Other forces verb to GET, seems required for Turbo
-    redirect_to root_url, status: :see_other
+    redirect_to root_url, status: :see_other, notice: "You're now signed out."
   end
 
   private
