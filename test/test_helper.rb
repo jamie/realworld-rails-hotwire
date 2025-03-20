@@ -17,3 +17,20 @@ module ActiveSupport
     # Add more helper methods to be used by all tests here...
   end
 end
+
+module ActionDispatch
+  class IntegrationTest
+    def sign_in(user)
+      post session_url, params: {
+        user: {
+          email: user.email,
+          password: "password" # This should match the password in your fixtures
+        }
+      }
+    end
+
+    def sign_out
+      delete session_url
+    end
+  end
+end
