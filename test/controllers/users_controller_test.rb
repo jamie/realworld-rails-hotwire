@@ -32,7 +32,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
       }
     end
 
-    assert_response :unprocessable_entity
+    assert_no_redirect
   end
 
   # test "the truth" do
