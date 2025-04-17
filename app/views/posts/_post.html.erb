@@ -1,17 +1,78 @@
 <div id="<%= dom_id post %>">
-  <p>
-    <strong>Title:</strong>
-    <%= post.title %>
-  </p>
+  <div class="article-meta">
+    <a href="/profile/<%= post.user.username %>"><img src="http://i.imgur.com/Qr71crq.jpg" /></a>
+    <div class="info">
+      <a href="/profile/<%= post.user.username %>" class="author"><%= post.user.username %></a>
+      <span class="date"><%= post.created_at.strftime("%B %d") %></span>
+    </div>
+    <button class="btn btn-sm btn-outline-secondary">
+      <i class="ion-plus-round"></i>
+      &nbsp; Follow <%= post.user.username %>
+    </button>
+    &nbsp;&nbsp;
+    <button class="btn btn-sm btn-outline-primary">
+      <i class="ion-heart"></i>
+      &nbsp; Favorite Post <span class="counter">(0)</span>
+    </button>
+    <% if current_user == post.user %>
+      <%= link_to edit_post_path(post), class: "btn btn-sm btn-outline-secondary" do %>
+        <i class="ion-edit"></i> Edit Article
+      <% end %>
+      <%= button_to post_path(post), method: :delete, class: "btn btn-sm btn-outline-danger" do %>
+        <i class="ion-trash-a"></i> Delete Article
+      <% end %>
+    <% end %>
+  </div>
 
-  <p>
-    <strong>Body:</strong>
-    <%= post.body %>
-  </p>
+  <div class="container page">
+    <div class="row article-content">
+      <div class="col-md-12">
+        <%= post.body_html %>
+      </div>
+    </div>
 
-  <p>
-    <strong>User:</strong>
-    <%= post.user_id %>
-  </p>
+    <hr />
 
+    <div class="article-actions">
+      <div class="article-meta">
+        <a href="/profile/<%= post.user.username %>"><img src="http://i.imgur.com/Qr71crq.jpg" /></a>
+        <div class="info">
+          <a href="/profile/<%= post.user.username %>" class="author"><%= post.user.username %></a>
+          <span class="date"><%= post.created_at.strftime("%B %d") %></span>
+        </div>
+
+        <button class="btn btn-sm btn-outline-secondary">
+          <i class="ion-plus-round"></i>
+          &nbsp; Follow <%= post.user.username %>
+        </button>
+        &nbsp;
+        <button class="btn btn-sm btn-outline-primary">
+          <i class="ion-heart"></i>
+          &nbsp; Favorite Article <span class="counter">(0)</span>
+        </button>
+        <% if current_user == post.user %>
+          <%= link_to edit_post_path(post), class: "btn btn-sm btn-outline-secondary" do %>
+            <i class="ion-edit"></i> Edit Article
+          <% end %>
+          <%= button_to post_path(post), method: :delete, class: "btn btn-sm btn-outline-danger" do %>
+            <i class="ion-trash-a"></i> Delete Article
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-md-8 offset-md-2">
+        <form class="card comment-form">
+          <div class="card-block">
+            <textarea class="form-control" placeholder="Write a comment..." rows="3"></textarea>
+          </div>
+          <div class="card-footer">
+            <img src="http://i.imgur.com/Qr71crq.jpg" class="comment-author-img" />
+            <button class="btn btn-sm btn-primary">Post Comment</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
