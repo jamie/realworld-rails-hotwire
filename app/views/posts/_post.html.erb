@@ -10,10 +10,7 @@
       &nbsp; Follow <%= post.user.username %>
     </button>
     &nbsp;&nbsp;
-    <button class="btn btn-sm btn-outline-primary">
-      <i class="ion-heart"></i>
-      &nbsp; Favorite Post <span class="counter">(0)</span>
-    </button>
+    <%= render "favorites/button", post: post %>
     <% if current_user == post.user %>
       <%= link_to edit_post_path(post), class: "btn btn-sm btn-outline-secondary" do %>
         <i class="ion-edit"></i> Edit Article
@@ -46,10 +43,7 @@
           &nbsp; Follow <%= post.user.username %>
         </button>
         &nbsp;
-        <button class="btn btn-sm btn-outline-primary">
-          <i class="ion-heart"></i>
-          &nbsp; Favorite Article <span class="counter">(0)</span>
-        </button>
+        <%= render "favorites/button", post: post %>
         <% if current_user == post.user %>
           <%= link_to edit_post_path(post), class: "btn btn-sm btn-outline-secondary" do %>
             <i class="ion-edit"></i> Edit Article
