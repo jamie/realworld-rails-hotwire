@@ -1,10 +1,44 @@
-<p style="color: green"><%= notice %></p>
+<div class="article-page">
+  <div class="banner">
+    <div class="container">
+      <h1><%= @post.title %></h1>
 
-<%= render @post %>
+      <div class="article-meta">
+        <a href="/profile/<%= @post.user.username %>"><img src="http://i.imgur.com/Qr71crq.jpg" /></a>
+        <div class="info">
+          <a href="/profile/<%= @post.user.username %>" class="author"><%= @post.user.username %></a>
+          <span class="date"><%= @post.created_at.strftime("%B %d, %Y") %></span>
+        </div>
+        <button class="btn btn-sm btn-outline-secondary">
+          <i class="ion-edit"></i> Edit Article
+        </button>
+        <%= button_to "Delete Article", @post, method: :delete, class: "btn btn-sm btn-outline-danger" do %>
+          <i class="ion-trash-a"></i> Delete Article
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-<div>
-  <%= link_to "Edit this post", edit_post_path(@post) %> |
-  <%= link_to "Back to posts", posts_path %>
+  <div class="container page">
+    <div class="row article-content">
+      <div class="col-md-12">
+        <%= @post.body_html %>
+      </div>
+    </div>
 
-  <%= button_to "Destroy this post", @post, method: :delete %>
+    <hr />
+
+    <div class="article-actions">
+      <div class="article-meta">
+        <a href="/profile/<%= @post.user.username %>"><img src="http://i.imgur.com/Qr71crq.jpg" /></a>
+        <div class="info">
+          <a href="/profile/<%= @post.user.username %>" class="author"><%= @post.user.username %></a>
+          <span class="date"><%= @post.created_at.strftime("%B %d, %Y") %></span>
+        </div>
+        <%= button_to "Favourite", favourites_path(post_id: @post.id), method: :post, class: "btn btn-sm btn-outline-primary" do %>
+          <i class="ion-heart"></i> Favourite
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
