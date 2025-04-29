@@ -1,0 +1,14 @@
+<%# This partial expects a local variable `post` %>
+<%= turbo_frame_tag "favorite_button_#{post.id}" do %>
+  <% if current_user&.favorited_posts&.include?(post) %>
+    <%= button_to post_favorite_path(post), method: :delete, class: "btn btn-sm btn-primary" do %>
+      <i class="ion-heart"></i>
+      &nbsp; Unfavorite Post <span class="counter">(<%= post.favorites.count %>)</span>
+    <% end %>
+  <% else %>
+    <%= button_to post_favorite_path(post), method: :post, class: "btn btn-sm btn-outline-primary" do %>
+      <i class="ion-heart"></i>
+      &nbsp; Favorite Post <span class="counter">(<%= post.favorites.count %>)</span>
+    <% end %>
+  <% end %>
+<% end %> 

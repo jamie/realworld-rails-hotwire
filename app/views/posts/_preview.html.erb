@@ -5,13 +5,11 @@
       <a href="" class="author"><%= post.user.username %></a>
       <span class="date"><%= post.created_at.strftime("%B %d") %></span>
     </div>
-    <button class="btn btn-outline-primary btn-sm pull-xs-right">
-      <i class="ion-heart"></i> 29
-    </button>
+    <%= render "favorites/button", post: post %>
   </div>
   <a href="<%= post_path(post) %>" class="preview-link">
     <h1><%= post.title %></h1>
-    <p><%= post.body %></p>
+    <p><%= post.body_html %></p>
     <span>Read more...</span>
   </a>
 </div>

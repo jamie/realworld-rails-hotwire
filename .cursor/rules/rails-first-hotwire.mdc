@@ -1,0 +1,107 @@
+---
+description: Rails-First Development - Prefer Rails patterns and Turbo over JavaScript
+globs: "{app/javascript/**/*.js,app/views/**/*.erb,app/controllers/**/*.rb}"
+alwaysApply: false
+---
+# Rails-First Development
+
+Rules for maintaining Rails conventions and avoiding JavaScript.
+
+<rule>
+name: rails_first
+description: Guidelines for preferring Rails patterns and Turbo over JavaScript
+filters:
+  # Match JavaScript/Stimulus files
+  - type: file_extension
+    pattern: "\\.(js|jsx)$"
+  # Match ERB files
+  - type: file_extension
+    pattern: "\\.erb$"
+  # Match Rails controllers
+  - type: file_path
+    pattern: "app/controllers/.*\\.rb$"
+
+actions:
+  - type: suggest
+    message: |
+      Always prefer the Rails way using Turbo and server-side rendering:
+
+      1. Use Turbo Streams instead of JavaScript:
+         ```ruby
+         # Bad - Using JavaScript:
+         document.getElementById("messages").innerHTML += messageHtml
+
+         # Good - Using Turbo Streams in controller:
+         def create
+           @message = Message.create!(message_params)
+           respond_to do |format|
+             format.turbo_stream
+           end
+         end
+
+         # Good - In messages/create.turbo_stream.erb:
+         <%= turbo_stream.append "messages" do %>
+           <%= render @message %>
+         <% end %>
+         ```
+
+      2. Use Turbo Frames for partial page updates:
+         ```erb
+         <%= turbo_frame_tag "messages" do %>
+           <%= render @messages %>
+         <% end %>
+         ```
+
+      3. Use Turbo Drive for navigation:
+         - Links and forms work automatically
+         - No need for JavaScript routing
+
+      4. For real-time updates, use Turbo Streams over WebSocket:
+         ```ruby
+         # In your model:
+         broadcasts_to ->(message) { "messages" }
+
+         # In your view:
+         <%= turbo_stream_from "messages" %>
+         ```
+
+      5. For complex interactions, use server-side state:
+         - Store state in the session or database
+         - Update via regular form submissions
+         - Render new state via Turbo Streams
+
+      Remember:
+      - JavaScript should be a last resort
+      - Most interactions can be handled with Turbo
+      - Keep business logic on the server
+      - Use progressive enhancement
+
+examples:
+  - input: |
+      // JavaScript file handling form submission
+      form.addEventListener("submit", (e) => {
+        e.preventDefault()
+        const data = new FormData(form)
+        fetch("/messages", {
+          method: "POST",
+          body: data
+        })
+      })
+    output: |
+      # Controller action
+      def create
+        @message = Message.create!(message_params)
+        respond_to do |format|
+          format.turbo_stream
+        end
+      end
+
+      # create.turbo_stream.erb
+      <%= turbo_stream.append "messages" do %>
+        <%= render @message %>
+      <% end %>
+
+metadata:
+  priority: high
+  version: 1.0
+</rule>
