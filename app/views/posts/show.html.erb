@@ -35,6 +35,9 @@
           <a href="/profile/<%= @post.user.username %>" class="author"><%= @post.user.username %></a>
           <span class="date"><%= @post.created_at.strftime("%B %d, %Y") %></span>
         </div>
+        <%= button_to "Favourite", favourites_path(post_id: @post.id), method: :post, class: "btn btn-sm btn-outline-primary" do %>
+          <i class="ion-heart"></i> Favourite
+        <% end %>
       </div>
     </div>
   </div>
